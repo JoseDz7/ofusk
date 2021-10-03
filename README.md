@@ -18,4 +18,5 @@
 - ` NOTA : El desofuscar se encuentra en mi versión pro full HD 4k 🎮 `
 </details>
 
-## Base64 :
+## sintaxis :
+![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211002-212917~2.png)
