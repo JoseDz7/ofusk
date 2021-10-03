@@ -60,8 +60,8 @@
 ---
 
 <!-- MarkDown Links & Images -->
-[version]: https://img.shields.io/badge/Versi%C3%B3n-BETA%3A%20V.2.0-green
+[version]: https://img.shields.io/badge/Versi%C3%B3n-BETA%3A%20V.1.0-green
 [tested]: https://img.shields.io/badge/Probado-Kali%20Linux%20%7C%20Userland%20%7C%20Termux-blue
-[autor]: https://img.shields.io/badge/Author-%40Th3__Pr3d4t0r-red
+[autor]: https://img.shields.io/badge/Author-%40Jose Diaz-red
 
 
