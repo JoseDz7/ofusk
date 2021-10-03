@@ -19,6 +19,8 @@
 
 - Si deseas apoyarme con una estrella en mis repositorios
 
+- remake pro de Anonymous_Zpt(https://github.com/Anonymous-Zpt?tab=repositories)
+
 - ` NOTA : El desofuscar se encuentra en mi versión pro full HD 4k 🎮 `
 </details>
 
