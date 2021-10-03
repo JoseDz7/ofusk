@@ -46,4 +46,4 @@
 ![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211003-095103~2.png)
 
 ## python2 :
-![Image text](
+![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211003-095516~3.png)
