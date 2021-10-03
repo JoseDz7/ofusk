@@ -4,5 +4,5 @@
 
 
 <details>
-<summary> ⚡ ***ofuscador*** ⚡ </summary>
+<summary> ⚡𝕠𝕗𝕦𝕤𝕔𝕒𝕕𝕠𝕣⚡ </summary>
 <br>
