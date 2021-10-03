@@ -55,21 +55,21 @@
 ## Instalacion :
 
 ~~~
-https://github.com/piratainformatico2/LocalXpose
+https://github.com/piratainformatico2/ofusk
 ~~~
 
 * `apt update && apt upgrade -y`
 
-* `git clone https://github.com/piratainformatico2/LocalXpose`
+* `git clone https://github.com/piratainformatico2/ofusk`
 
-* `cd LocalXpose`
+* `cd ofusk`
 
-* `chmod +x *`
+* `chmod +x ofusk`
 
-* `./Local.sh`
+* `./ofusk`
 
 ---
-###### ` Puedes desofuscar, pero no copiar!! ` 
+###### `Pd: Puedes desofuscar, pero no copiar!! ` 
 ###### `By: José Díaz +52 2283821202` 🇲🇽🇲🇽
 ---
 
