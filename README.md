@@ -28,4 +28,4 @@
 ![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211002-212842~2.png)
 
 ## Base32
-![Image text](
+![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211002-213802~2.png)
