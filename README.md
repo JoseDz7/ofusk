@@ -16,3 +16,6 @@
 - Si deseas apoyarme con una estrella en mis repositorios
 
 - ` NOTA : El desofuscar se encuentra en mi versión pro full HD 4k 🎮 `
+</details>
+
+## Base64 :
