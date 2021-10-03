@@ -52,12 +52,28 @@
 ## python2 :
 ![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211003-095516~3.png)
 
+## Instalacion :
 
+~~~
+https://github.com/piratainformatico2/LocalXpose
+~~~
 
+* `apt update && apt upgrade -y`
 
+* `git clone https://github.com/piratainformatico2/LocalXpose`
 
+* `cd LocalXpose`
+
+* `chmod +x *`
+
+* `./Local.sh`
 
 ---
+###### ` Puedes desofuscar, pero no copiar!! ` 
+###### `By: José Díaz +52 2283821202` 🇲🇽🇲🇽
+---
+
+
 
 <!-- MarkDown Links & Images -->
 [version]: https://img.shields.io/badge/Versi%C3%B3n-BETA%3A%20V.1.0-green
