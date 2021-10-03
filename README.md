@@ -2,6 +2,10 @@
 
 <p align="center"><img src="https://github.com/piratainformatico2/packages/blob/main/Images/20210928_223304.gif" width="360" height="115"/> </p>
 
+![version]
+![Tested]
+![autor]
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com)
 
 <details>
 <summary> ⚡𝕠𝕗𝕦𝕤𝕔𝕒𝕕𝕠𝕣⚡ </summary>
@@ -47,4 +51,17 @@
 
 ## python2 :
 ![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211003-095516~3.png)
+
+
+
+
+
+
+---
+
+<!-- MarkDown Links & Images -->
+[version]: https://img.shields.io/badge/Versi%C3%B3n-BETA%3A%20V.2.0-green
+[tested]: https://img.shields.io/badge/Probado-Kali%20Linux%20%7C%20Userland%20%7C%20Termux-blue
+[autor]: https://img.shields.io/badge/Author-%40Th3__Pr3d4t0r-red
+
 
