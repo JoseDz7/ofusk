@@ -2,6 +2,11 @@
 
 <p align="center"><img src="https://github.com/piratainformatico2/packages/blob/main/Images/20210928_223304.gif" width="360" height="115"/> </p>
 
+! [versión]
+! [Probado]
+! [autor]
+[! [Donar] (https://img.shields.io/badge/Donate-PayPal-green.svg)] (https://www.paypal.me/th3pr3d4t0r)
+
 
 <details>
 <summary> ⚡𝕠𝕗𝕦𝕤𝕔𝕒𝕕𝕠𝕣⚡ </summary>
@@ -48,4 +53,3 @@
 ## python2 :
 ![Image text](https://github.com/piratainformatico2/ofusk/blob/main/images/Screenshot_20211003-095516~3.png)
 
-## php :
