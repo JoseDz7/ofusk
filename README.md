@@ -72,7 +72,7 @@ https://github.com/piratainformatico2/ofusk
 * `./ofusk`
 
 ---
-###### `Pd: Puedes desofuscar, pero no copiar!! ` 
+###### `:) Puedes desofuscar, pero no copiar!! ` 
 ###### `By: José Díaz +52 2283821202` 🇲🇽🇲🇽
 ---
 
