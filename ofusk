@@ -1,0 +1,456 @@
+#!/bin/bash
+#               COLORES RESALTADOS :D
+# ===============================================
+negro="\e[1;30m"
+azul="\e[1;34m"
+verde="\e[1;32m"
+cian="\e[1;36m"
+rojo="\e[1;31m"
+purpura="\e[1;35m"
+amarillo="\e[1;33m"
+blanco="\e[1;37m"
+# ===============================================
+#                 COLORES BAJOS
+# ===============================================
+black="\e[0;30m"
+blue="\e[0;34m"
+green="\e[0;32m"
+cyan="\e[0;36m"
+red="\e[0;31m"
+purple="\e[0;35m"
+yellow="\e[0;33m"
+white="\e[0;37m"
+trap Adios INT
+Adios() {
+if [ -e Anonymous.sh ]; then
+rm Anonymous.sh
+fi
+if [ -e JOSE.py ]; then
+rm JOSE.py
+fi
+if [ -e .Zpt ]; then
+rm .Zpt
+fi
+if [ -e .Zpt1 ]; then
+rm .Zpt1
+fi
+exit
+}
+if [ ! -e $PREFIX/bin/ofusk ]; then
+chmod 777 ~/ofusk/ofusk
+cp  ofusk $PREFIX/bin
+fi
+ofusca_python2() {
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+echo "#!/bin/python2" >> $Nombre
+base64 $file > JOSE.py
+Zpt=$(cat JOSE.py)
+echo "import base64" >> $Nombre
+echo 'Anonymous_Zpt = """'$Zpt'"""' >> $Nombre
+echo "eval(compile(base64.b64decode(Anonymous_Zpt),'','exec'))" >> $Nombre
+if [ -e JOSE.py ]; then
+rm JOSE.py
+fi
+chmod 700 $Nombre
+sleep 1
+exit
+}
+ofusca_gzip() {
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+gzip -n -k $file
+echo "#!/bin/bash" >> $Nombre
+echo 'source <(gzip -c -d  <(tail -n+"$((LINENO + 2))" "$BASH_SOURCE"));' >> $Nombre
+echo 'status="$?"; return "$status" 2> /dev/null || exit "$status"' >> $Nombre
+cat $file.gz >> $Nombre
+rm $file.gz
+chmod +x $Nombre
+}
+ofusca_base64() {
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+echo "#!/bin/bash" >> $Nombre
+echo 'sharkcode=$(mktemp)' >> $Nombre
+echo 'base64 -d  >${sharkcode}<<DIXIE' >> $Nombre
+echo "$(base64 $file)" >> $Nombre
+echo "DIXIE" >> $Nombre
+echo 'source ${sharkcode}' >> $Nombre
+echo 'rm -rf ${sharkcode}' >> $Nombre
+chmod +x $Nombre
+sleep 1
+}
+ofusca_base32() {
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+echo "#!/bin/bash" >> $Nombre
+echo 'sharkcode=$(mktemp)' >> $Nombre
+echo 'base32 -d  >${sharkcode}<<DIXIE' >> $Nombre
+echo "$(base32 $file)" >> $Nombre
+echo "DIXIE" >> $Nombre
+echo 'source ${sharkcode}' >> $Nombre
+echo 'rm -rf ${sharkcode}' >> $Nombre
+chmod +x $Nombre
+sleep 1
+}
+ofusca_base2() {
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+echo "#!/bin/bash" >> $Nombre
+echo 'sharkcode=$(mktemp)' >> $Nombre
+echo 'basenc --base2msbf -d  >${sharkcode}<<DIXIE' >> $Nombre
+echo "$(basenc --base2msbf $file)" >> $Nombre
+echo "DIXIE" >> $Nombre
+echo 'source ${sharkcode}' >> $Nombre
+echo 'rm -rf ${sharkcode}' >> $Nombre
+chmod +x $Nombre
+}
+ofusca_base16() {
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+echo "#!/bin/bash" >> $Nombre
+echo 'sharkcode=$(mktemp)' >> $Nombre
+echo 'basenc --base16 -d  >${sharkcode}<<DIXIE' >> $Nombre
+echo "$(basenc --base16 $file)" >> $Nombre
+echo "DIXIE" >> $Nombre
+echo 'source ${sharkcode}' >> $Nombre
+echo 'rm -rf ${sharkCode}' >> $Nombre
+chmod +x $Nombre
+sleep 1
+}
+ofusca_bin() {
+randm1=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm2=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm3=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm4=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm5=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm6=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm7=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm8=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm9=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm10=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm11=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm12=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm13=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm14=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm15=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm16=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm17=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm18=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm19=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm20=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm21=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm22=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm23=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm24=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm25=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm26=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm27=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm28=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm29=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm30=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm31=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+randm32=$(cat /dev/urandom | tr -dc 'A-Za-z' | fold -w 100 | head -n 1)
+	anu=$(cat $file | base64 | tr -d '
+' )
+	anu=$(echo "$anu" | rev)
+	nasa="$randm1=\"$randm2\";$randm3=\"$randm4\";$randm5=\"ch\";$randm6=\"4\";$randm7=\"\";$randm9=\"$randm10\";$randm11=\" $anu | r\";$randm12=\"$randm13\";$randm14=\"\";$randm15=\"as\";$randm16=\"$randm17\";$randm18=\"$randm19\";$randm20=\"o\";$randm21=\"6\";$randm22=\"$randm23\";$randm24=\" -d\";$randm25=\"$randm26\";$randm27=\"\";$randm28=\"b\";$randm29=\"e\";$randm30=\"v |\";Tx="Eds";$randm31=\"\""
+de=''"$randm32"'=$(eval '"\"\$$randm14\$$randm29\$$randm5\$$randm7\$$randm20\$$randm11\$$randm29\$$randm30\$$randm14\$$randm28\$$randm31\$$randm15\$$randm29\$$randm21\$$randm7\$$randm6\$$randm24\$$randm31\""')'
+zc='eval '"\"\$$randm27\$$randm32\$$randm14\$$randm7\""''
+if [ -e $Nombre ]; then
+rm -rf $Nombre
+fi
+echo "#!/bin/bash" >> $Nombre
+printf "$nasa;$de;$zc" >> $Nombre
+chmod +x $Nombre
+}
+ofusca_php() {
+nk() {
+curl -s 'http://localhost:4455' > .Zpt1
+case $(cat .Zpt1) in
+"")
+nk
+esac
+}
+if [ -e $Nombre.php ]; then
+rm -rf $Nombre.php
+fi
+nn='$txt='
+nn1='$txt'
+cat $file > .Zpt
+sed -i "s/<?php/<?php\n$nn '/" .Zpt
+sed -i "s/?>/';\necho base64_encode($nn1);\n?>/" .Zpt
+php -S localhost:4455 .Zpt > /dev/null 2>&1 &
+nk
+echo "<?php" >> $Nombre
+printf 'eval("eval(base64_decode(' >> $Nombre
+printf "'$(cat .Zpt1)" >> $Nombre
+printf "'));" >> $Nombre
+printf '");\n' >> $Nombre
+echo "?>" >> $Nombre
+chmod +x $Nombre
+checkphp=$(ps aux | grep -o "php" | head -n1)
+if [[ $checkphp == *'php'* ]]; then
+pkill -f -2 php > /dev/null 2>&1
+killall -2 php > /dev/null 2>&1
+fi
+}
+ofusca_shc() {
+shc -v -r -f $file -o $Nombre &>> /dev/null
+if [ -e $file.x.c ]; then
+rm $file.x.c
+fi
+}
+ayuda () {
+	clear
+
+echo -e "
+${cian}▄▄▄▄·  ▄▄▄· .▄▄ · ▄▄▄ .   ${blanco}  ▄▄·       ·▄▄▄▄  ▄▄▄ .
+${cian}▐█ ▀█▪▐█ ▀█ ▐█ ▀. ▀▄.▀·    ${blanco}▐█ ▌▪▪     ██▪ ██ ▀▄.▀·
+${cian}▐█▀▀█▄▄█▀▀█ ▄▀▀▀█▄▐▀▀▪▄    ${blanco}██ ▄▄ ▄█▀▄ ▐█· ▐█▌▐▀▀▪▄
+${cian}██▄▪▐█▐█ ▪▐▌▐█▄▪▐█▐█▄▄▌    ${blanco}▐███▌▐█▌.▐▌██. ██ ▐█▄▄▌
+${cian}·▀▀▀▀  ▀  ▀  ▀▀▀▀  ▀▀▀     ${blanco}·▀▀▀  ▀█▄▀▪▀▀▀▀▀•  ▀▀▀"
+echo ""
+echo -e "${negro}[${verde} :D ${negro}] >>> Metodos de ofuscacion bash ${rojo}:)"
+echo ""
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -base64${verde} ✓✓"
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -base2${verde} ✓✓"
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -base32${verde} ✓✓"
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -base16${verde} ✓✓"
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -eval${verde} ✓✓"
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -shc${verde} ✓✓"
+echo -e "${negro} ofusk -r prueba.sh -n prueba2.sh -gzip${verde} ✓✓"
+echo ""
+echo -e "${negro}[${verde} :D ${negro}] >>> Metodos de ofuscacion python2${rojo} :)"
+echo ""
+echo -e "${negro} ofusk -r prueba.py -n prueba2.py -python2${verde} ✓✓"
+echo ""
+echo -e "${negro}[${verde} :D ${negro}] >>> Metodos de ofuscacion php${rojo} :)"
+echo ""
+echo -e "${negro} ofusk -r prueba.php -n prueba2.php -php${verde} ✓✓"
+echo ""
+}
+verifica_ruta() {
+if [ ! -e $file ]; then
+echo -e "${negro}[${verde} :( ${negro}] >>>${verde} $file No existe el archivo.${rojo} :("
+exit 1
+fi
+}
+verifica_nombre() {
+if [ -e $Nombre ]; then
+echo -e "${negro}[${verde} :( ${negro}] >>>${verde} $Nombre Nuevo nombre ya existe.${rojo} :("
+exit 1
+fi
+}
+if [ ! -z $1 ]||[ ! -z $2 ]||[ ! -z $3 ]||[ ! -z $4 ]||[ ! -z $5 ]; then
+case $1 in
+--file|-r)
+;;
+--version|-v)
+echo -e "${negro}[${verde} ¿? ${negro}] >>>${verde} ofusk version 1.1"
+exit
+;;
+--help|-h|?)
+	clear
+echo -e "
+${cian}▄▄▄▄·  ▄▄▄· .▄▄ · ▄▄▄ .   ${blanco}  ▄▄·       ·▄▄▄▄  ▄▄▄ .
+${cian}▐█ ▀█▪▐█ ▀█ ▐█ ▀. ▀▄.▀·    ${blanco}▐█ ▌▪▪     ██▪ ██ ▀▄.▀·
+${cian}▐█▀▀█▄▄█▀▀█ ▄▀▀▀█▄▐▀▀▪▄    ${blanco}██ ▄▄ ▄█▀▄ ▐█· ▐█▌▐▀▀▪▄
+${cian}██▄▪▐█▐█ ▪▐▌▐█▄▪▐█▐█▄▄▌    ${blanco}▐███▌▐█▌.▐▌██. ██ ▐█▄▄▌
+${cian}·▀▀▀▀  ▀  ▀  ▀▀▀▀  ▀▀▀     ${blanco}·▀▀▀  ▀█▄▀▪▀▀▀▀▀•  ▀▀▀"
+echo ""
+echo -e "${negro}
+${verde}Pruebe${verde} 'ofusk -o'${rojo} para ofuscaciones.
+${verde}Pruebe${verde} 'ofusk -d'${rojo} para desofuscaciones.\n
+${negro}Otras opciones:
+${negro} -o, --ofusca   Listado de ofuscaciones disponibles con ejemplo.
+${negro} -r, --file     Despues de esta Variable va el archivo a ofuscar.
+${negro} -n, --newname  Despues de esta Variable va el nuevo nombre
+${negro} -h, --help     Muestra este menú de ayuda.
+${negro} -v, --version  Informa la versión actual de la herramienta (ofusk)."
+echo ""
+exit
+;;
+--ofusca|-o)
+ayuda
+exit
+;;
+*)
+nn=$(echo "$1" |tr -d '-')
+case $1 in
+"-")
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Variable de nuevo nombre no valida -- '-'"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk --help para obtener infomacion."
+echo ""
+exit 1
+;;
+*)
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Primera variable no valida -- '$nn'"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk --help para obtener infomacion."
+echo ""
+exit 1
+;;
+esac
+esac
+for file in $2; do
+verifica_ruta
+done
+case $2 in
+"")
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Archivo a ofuscar no definido"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk --help para obtener informacion"
+echo ""
+exit 1
+esac
+case $3 in
+--newname|-n)
+;;
+*)
+case $3 in
+"")
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Variable de nuevo nombre no definida"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk --help para obtener informacion"
+echo ""
+exit 1
+;;
+esac
+esac
+for Nombre in $4; do
+ls &>> /dev/null
+done
+case $4 in
+"")
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Nuevo nombre del archivo a ofuscar no definido"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk --help para obtener informacion"
+echo ""
+exit 1
+esac
+case $5 in
+"-gzip")
+verifica_ruta
+verifica_nombre
+sleep 1
+ofusca_gzip
+exit
+;;
+"-base64")
+verifica_ruta
+verifica_nombre
+ofusca_base64
+exit
+;;
+"-python2")
+verifica_ruta
+verifica_nombre
+ofusca_python2
+exit
+;;
+"-base2")
+verifica_ruta
+verifica_nombre
+sleep 1
+ofusca_base2
+exit
+;;
+"-eval")
+verifica_ruta
+verifica_nombre
+sleep 1
+ofusca_bin
+exit
+;;
+"-php")
+case $(command -v php) in
+"")
+case $(ping -c 1 -q www.google.com >&/dev/null; echo $?) in
+0)
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Instalando Dependencias..."
+sleep 0.8
+apt-get install -y php
+ofusca -r $file -n $Nombre -php
+;;
+*)
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Esta funcion necesita conexion a internet"
+exit
+esac
+esac
+verifica_ruta
+verifica_nombre
+ofusca_php
+exit
+;;
+"-base32")
+verifica_ruta
+verifica_nombre
+ofusca_base32
+exit
+;;
+"-base16")
+verifica_ruta
+verifica_nombre
+ofusca_base16
+exit
+;;
+"-shc")
+case $(command -v shc) in
+"")
+case $(ping -c 1 -q www.google.com >&/dev/null; echo $?) in
+0)
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Instalando Dependencias..."
+sleep 0.8
+apt-get install -y shc
+ofusk -r $file -n $Nombre -shc
+;;
+*)
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Esta funcion necesita conexion a internet"
+exit
+esac
+esac
+verifica_ruta
+verifica_nombre
+ofusca_shc
+;;
+*)
+case $5 in
+"")
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Falta formato de ofuscación/desofuscación"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk -o para ofuscar o ofusk -d para desofuscar."
+echo ""
+exit
+;;
+"-")
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Formato de ofuscación/desofuscación no válida -- '-'"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk -o para ofuscar o 'ofusk -d' para desofuscar."
+echo ""
+exit
+;;
+*)
+nn=$(echo "$5" |tr -d '-')
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Formato de ofuscación/desofuscación no válida -- '$nn'"
+echo ""
+exit
+;;
+esac
+;;
+esac
+else
+echo ""
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Tipos de codificación faltantes"
+echo -e "${negro}[${verde} Ofusk ${negro}] >>>${verde} Pruebe ofusk --help para obtener más información."
+echo ""
+fi
+
